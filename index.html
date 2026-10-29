@@ -122,7 +122,7 @@
           <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-brand-card flex items-center justify-center relative">
             <img 
               id="mainProductImg"
-              src="IMG_7612.JPG_2.jpeg" 
+              src="https://i.imgur.com/6wmLVEC.jpeg" 
               alt="maisonsabot - Sabot Clog"
               class="w-full h-full object-cover fade-img"
             />
@@ -382,28 +382,28 @@
         nameAr: 'بني جملي (Camel)',
         nameFr: 'Marron Camel (Cuir Suède)',
         colorCode: '#964724',
-        img: 'IMG_7612.JPG_2.jpeg'
+        img: 'https://i.imgur.com/6wmLVEC.jpeg'
       },
       sable: {
         id: 'sable',
         nameAr: 'بيج رملي (Sable / Beige)',
         nameFr: 'Beige Sable (Cuir Suède)',
         colorCode: '#D4C3A3',
-        img: 'IMG_7613.JPG_2.jpeg'
+        img: 'https://i.imgur.com/aeApiv4.jpeg'
       },
       taupe: {
         id: 'taupe',
         nameAr: 'رمادي طوب (Taupe / Kaki)',
         nameFr: 'Taupe Kaki (Cuir Suède)',
         colorCode: '#827D70',
-        img: 'IMG_7611.JPG_2.jpeg'
+        img: 'https://i.imgur.com/91NyVNq.jpeg'
       },
       noir: {
         id: 'noir',
         nameAr: 'أسود ملكي (Noir)',
         nameFr: 'Noir Profond (Cuir Suède)',
         colorCode: '#202022',
-        img: 'IMG_7614.JPG_2.jpeg'
+        img: 'https://i.imgur.com/oXe33jr.jpeg'
       }
     };
 
@@ -434,6 +434,11 @@
       mainImg.style.transform = 'scale(0.98)';
       
       setTimeout(() => {
+        // Assign the fallback url if the local image fails to load during variant switch
+        mainImg.onerror = function() {
+          this.onerror = null;
+          this.src = variant.fallback;
+        };
         mainImg.src = variant.img;
         mainImg.style.opacity = '1';
         mainImg.style.transform = 'scale(1)';
