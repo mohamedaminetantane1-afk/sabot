@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>maisonsabot — Luxury Suede Clogs | سابو أنيق ومريح</title>
+  
+  <!-- Fonts: Cairo for Arabic & Montserrat for French / Luxury Brand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FDFBF7',
+              sand: '#EFE9DE',
+              taupe: '#8C857B',
+              camel: '#A85A2A',
+              dark: '#141413',
+              card: '#F6F3EC',
+              accent: '#C58F58',
+              gold: '#D4A373'
+            }
+          },
+          fontFamily: {
+            ar: ['Cairo', 'sans-serif'],
+            fr: ['Poppins', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * {
+      -webkit-tap-highlight-color: transparent;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #FDFBF7;
+      color: #141413;
+      font-family: 'Cairo', 'Poppins', sans-serif;
+      overflow-x: hidden;
+      padding-bottom: 90px; /* space for mobile sticky bar */
+    }
+    html[lang="fr"] body {
+      font-family: 'Poppins', 'Cairo', sans-serif;
+    }
+
+    /* Custom Transitions */
+    .fade-img {
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+    .swatch-ring {
+      box-shadow: 0 0 0 2px #FDFBF7, 0 0 0 4px #141413;
+    }
+
+    /* Subtle Luxury Shadows */
+    .luxury-card {
+      box-shadow: 0 10px 30px -10px rgba(20, 20, 19, 0.08);
+    }
+    .sticky-bar-shadow {
+      box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.08);
+    }
+  </style>
+</head>
+<body class="selection:bg-amber-100 selection:text-amber-900">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-brand-dark text-brand-cream text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+    <span data-ar="توصيل مجاني وسريع في جميع مدن المغرب • الدفع بعد المعاينة" data-fr="Livraison Gratuite Partout au Maroc • Paiement à la Livraison">
+      توصيل مجاني وسريع في جميع مدن المغرب • الدفع بعد المعاينة
+    </span>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 bg-brand-cream/90 backdrop-blur-md border-b border-brand-sand">
+    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex flex-col">
+        <span class="font-serif tracking-widest text-2xl font-bold uppercase text-brand-dark">maisonsabot</span>
+        <span class="text-[9px] tracking-[0.28em] uppercase -mt-1 text-brand-taupe font-fr font-semibold">Maroc • Artisanat</span>
+      </a>
+
+      <!-- Language Toggle Switcher -->
+      <button onclick="toggleLang()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-brand-taupe/30 hover:border-brand-dark text-xs font-semibold bg-white transition-all shadow-sm">
+        <svg class="w-3.5 h-3.5 text-brand-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" stroke-width="2"/>
+          <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke-width="2"/>
+        </svg>
+        <span id="langText">Français</span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Main Product Container (Mobile-First Layout) -->
+  <main class="max-w-4xl mx-auto px-4 pt-4 pb-12">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      
+      <!-- Product Gallery & Live Color Switcher -->
+      <div class="flex flex-col gap-3">
+        
+        <!-- Main Image Stage with Badge -->
+        <div class="relative bg-white rounded-3xl p-3 border border-brand-sand luxury-card overflow-hidden">
+          
+          <div class="absolute top-4 start-4 z-10 bg-brand-dark/85 backdrop-blur text-white text-[11px] font-bold py-1 px-3 rounded-full flex items-center gap-1">
+            <span class="text-amber-400">★</span> 
+            <span data-ar="جلد شامواه فاخر (Suède)" data-fr="Cuir Suède Véritable">جلد شامواه فاخر (Suède)</span>
+          </div>
+
+          <!-- The Active Displayed Image -->
+          <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-brand-card flex items-center justify-center relative">
+            <img 
+              id="mainProductImg"
+              src="IMG_7612.JPG_2.jpeg" 
+              alt="maisonsabot - Sabot Clog"
+              class="w-full h-full object-cover fade-img"
+            />
+          </div>
+
+        </div>
+
+        <!-- Color Selector Swatches with Interactive Names -->
+        <div class="bg-white p-4 rounded-2xl border border-brand-sand">
+          <div class="flex justify-between items-center mb-3">
+            <span class="text-xs font-bold text-brand-taupe uppercase tracking-wider" data-ar="اختر اللون:" data-fr="Couleur sélectionnée:">اختر اللون:</span>
+            <span id="activeColorName" class="text-sm font-bold text-brand-dark">بني جملي (Camel)</span>
+          </div>
+
+          <!-- The 4 Swatches matching the user's photos -->
+          <div class="grid grid-cols-4 gap-2">
+            
+            <!-- Camel / Marron (IMG_7612) -->
+            <button onclick="selectVariant('camel')" id="swatch-camel" class="color-swatch-btn group flex flex-col items-center gap-1.5 p-2 rounded-xl border border-transparent hover:bg-brand-sand/40 transition">
+              <span class="w-9 h-9 rounded-full bg-[#964724] border-2 border-white shadow-md flex items-center justify-center transition-transform group-hover:scale-105"></span>
+              <span class="text-[11px] font-bold text-zinc-700" data-ar="جملي" data-fr="Camel">جملي</span>
+            </button>
+
+            <!-- Beige / Sable (IMG_7613) -->
+            <button onclick="selectVariant('sable')" id="swatch-sable" class="color-swatch-btn group flex flex-col items-center gap-1.5 p-2 rounded-xl border border-transparent hover:bg-brand-sand/40 transition">
+              <span class="w-9 h-9 rounded-full bg-[#D4C3A3] border-2 border-white shadow-md flex items-center justify-center transition-transform group-hover:scale-105"></span>
+              <span class="text-[11px] font-bold text-zinc-700" data-ar="رملي" data-fr="Sable">رملي</span>
+            </button>
+
+            <!-- Taupe / Kaki (IMG_7611) -->
+            <button onclick="selectVariant('taupe')" id="swatch-taupe" class="color-swatch-btn group flex flex-col items-center gap-1.5 p-2 rounded-xl border border-transparent hover:bg-brand-sand/40 transition">
+              <span class="w-9 h-9 rounded-full bg-[#827D70] border-2 border-white shadow-md flex items-center justify-center transition-transform group-hover:scale-105"></span>
+              <span class="text-[11px] font-bold text-zinc-700" data-ar="طوب" data-fr="Taupe">طوب</span>
+            </button>
+
+            <!-- Noir / Black (IMG_7614) -->
+            <button onclick="selectVariant('noir')" id="swatch-noir" class="color-swatch-btn group flex flex-col items-center gap-1.5 p-2 rounded-xl border border-transparent hover:bg-brand-sand/40 transition">
+              <span class="w-9 h-9 rounded-full bg-[#202022] border-2 border-white shadow-md flex items-center justify-center transition-transform group-hover:scale-105"></span>
+              <span class="text-[11px] font-bold text-zinc-700" data-ar="أسود" data-fr="Noir">أسود</span>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- Trust Badges Bar -->
+        <div class="grid grid-cols-2 gap-2 text-center pt-1">
+          <div class="bg-white p-2.5 rounded-xl border border-brand-sand flex flex-col items-center gap-1">
+            <svg class="w-5 h-5 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-[10px] font-bold text-brand-dark" data-ar="الدفع بعد المعاينة" data-fr="Paiement à la livraison">الدفع بعد المعاينة</span>
+          </div>
+          <div class="bg-white p-2.5 rounded-xl border border-brand-sand flex flex-col items-center gap-1">
+            <svg class="w-5 h-5 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span class="text-[10px] font-bold text-brand-dark" data-ar="توصيل 24 - 48 ساعة" data-fr="Livraison 24 - 48h">توصيل 24 - 48 ساعة</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Product Configuration & WhatsApp Checkout Form -->
+      <div class="flex flex-col gap-5">
+        
+        <!-- Title & Pricing Card -->
+        <div class="bg-white p-5 rounded-3xl border border-brand-sand luxury-card">
+          <div class="flex justify-between items-start gap-2">
+            <div>
+              <span class="text-[11px] font-bold text-brand-camel uppercase tracking-widest" data-ar="المجموعة الأصلية" data-fr="COLLECTION ORIGINALE">المجموعة الأصلية</span>
+              <h1 class="text-xl md:text-2xl font-black text-brand-dark mt-0.5" data-ar="سابو بوسطن من الجلد السويدي" data-fr="Sabot Boston en Cuir Suède">سابو بوسطن من الجلد السويدي</h1>
+            </div>
+            <span class="bg-red-50 text-red-600 text-xs font-black px-2.5 py-1 rounded-full border border-red-200">
+              -35% OFF
+            </span>
+          </div>
+
+          <p class="text-xs text-brand-taupe mt-2 leading-relaxed" data-ar="حذاء سابو أيقوني مصنوع بحرفية عالية من جلد الشامواه الطبيعي ونعل مريح يدعم القدم طوال اليوم." data-fr="Mules emblématiques en cuir suédé velouté avec semelle anatomique confortable pour un maintien parfait.">
+            حذاء سابو أيقوني مصنوع بحرفية عالية من جلد الشامواه الطبيعي ونعل مريح يدعم القدم طوال اليوم.
+          </p>
+
+          <!-- Price Display -->
+          <div class="mt-4 pt-3 border-t border-brand-sand flex items-baseline gap-3">
+            <span class="text-2xl font-black text-brand-dark" id="displayUnitPrice">220 DH</span>
+            <span class="text-sm line-through text-zinc-400 font-semibold">350 DH</span>
+            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md" data-ar="توصيل مجاني 🚚" data-fr="Livraison Gratuite 🚚">توصيل مجاني 🚚</span>
+          </div>
+        </div>
+
+        <!-- Size Selection (37, 38, 39, 40) -->
+        <div class="bg-white p-5 rounded-3xl border border-brand-sand luxury-card">
+          <div class="flex justify-between items-center mb-3">
+            <label class="text-sm font-bold text-brand-dark" data-ar="اختر المقاس:" data-fr="Sélectionnez votre taille:">اختر المقاس:</label>
+            <span class="text-xs text-brand-taupe font-semibold" data-ar="قياس قياسي (Prenez votre pointure)" data-fr="Taille standard">قياس قياسي (Prenez votre pointure)</span>
+          </div>
+
+          <div class="grid grid-cols-4 gap-2.5">
+            <button type="button" onclick="selectSize('37')" id="size-btn-37" class="size-btn py-3 rounded-2xl border-2 font-bold text-sm transition-all text-center">37</button>
+            <button type="button" onclick="selectSize('38')" id="size-btn-38" class="size-btn py-3 rounded-2xl border-2 font-bold text-sm transition-all text-center">38</button>
+            <button type="button" onclick="selectSize('39')" id="size-btn-39" class="size-btn py-3 rounded-2xl border-2 font-bold text-sm transition-all text-center">39</button>
+            <button type="button" onclick="selectSize('40')" id="size-btn-40" class="size-btn py-3 rounded-2xl border-2 font-bold text-sm transition-all text-center">40</button>
+          </div>
+        </div>
+
+        <!-- Quantity Selector (+ and -) -->
+        <div class="bg-white p-5 rounded-3xl border border-brand-sand luxury-card flex items-center justify-between">
+          <div>
+            <span class="text-sm font-bold text-brand-dark block" data-ar="الكمية:" data-fr="Quantité:">الكمية:</span>
+            <span class="text-xs text-brand-taupe" data-ar="اطلب 2 أو أكثر مع صديق" data-fr="Commandez 2 ou plus">اطلب 2 أو أكثر مع صديق</span>
+          </div>
+
+          <div class="flex items-center gap-3 bg-brand-cream border border-brand-sand rounded-2xl p-1.5">
+            <button onclick="updateQty(-1)" class="w-9 h-9 rounded-xl bg-white border border-brand-sand shadow-sm flex items-center justify-center font-bold text-lg active:scale-95 transition hover:bg-brand-sand/30">−</button>
+            <span id="qtyCounter" class="w-8 text-center font-black text-base">1</span>
+            <button onclick="updateQty(1)" class="w-9 h-9 rounded-xl bg-white border border-brand-sand shadow-sm flex items-center justify-center font-bold text-lg active:scale-95 transition hover:bg-brand-sand/30">+</button>
+          </div>
+        </div>
+
+        <!-- Direct Customer Order Form -->
+        <div class="bg-white p-5 rounded-3xl border border-brand-sand luxury-card" id="orderSection">
+          <h2 class="text-base font-black text-brand-dark mb-1 flex items-center gap-2">
+            <svg class="w-5 h-5 text-brand-camel" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            <span data-ar="معلومات التوصيل (الدفع عند الاستلام)" data-fr="Informations de Livraison (Paiement sur place)">معلومات التوصيل (الدفع عند الاستلام)</span>
+          </h2>
+          <p class="text-xs text-brand-taupe mb-4" data-ar="يرجى ملء البيانات لتأكيد طلبك مباشرة عبر الواتساب" data-fr="Remplissez ce formulaire pour envoyer votre commande sur WhatsApp">
+            يرجى ملء البيانات لتأكيد طلبك مباشرة عبر الواتساب
+          </p>
+
+          <form id="checkoutForm" onsubmit="handleOrderSubmit(event)" class="space-y-3.5">
+            
+            <!-- Full Name -->
+            <div>
+              <label class="block text-xs font-bold text-zinc-700 mb-1" data-ar="الاسم الكامل *" data-fr="Nom et Prénom *">الاسم الكامل *</label>
+              <input 
+                type="text" 
+                id="customerName" 
+                required 
+                placeholder="مثال: ياسمين العلمي" 
+                data-placeholder-ar="مثال: ياسمين العلمي"
+                data-placeholder-fr="Ex: Yasmine Alami"
+                class="w-full px-4 py-3 rounded-xl bg-brand-cream border border-brand-sand text-sm focus:border-brand-dark focus:outline-none transition"
+              />
+            </div>
+
+            <!-- Phone Number -->
+            <div>
+              <label class="block text-xs font-bold text-zinc-700 mb-1" data-ar="رقم الهاتف (واتساب) *" data-fr="Numéro de Téléphone (WhatsApp) *">رقم الهاتف (واتساب) *</label>
+              <input 
+                type="tel" 
+                id="customerPhone" 
+                required 
+                dir="ltr"
+                placeholder="06 XX XX XX XX" 
+                class="w-full px-4 py-3 rounded-xl bg-brand-cream border border-brand-sand text-sm focus:border-brand-dark focus:outline-none transition font-sans text-right"
+              />
+            </div>
+
+            <!-- City (Dropdown + popular Moroccan cities) -->
+            <div>
+              <label class="block text-xs font-bold text-zinc-700 mb-1" data-ar="المدينة *" data-fr="Ville *">المدينة *</label>
+              <select 
+                id="customerCity" 
+                required 
+                class="w-full px-4 py-3 rounded-xl bg-brand-cream border border-brand-sand text-sm focus:border-brand-dark focus:outline-none transition"
+              >
+                <option value="" disabled selected data-ar="اختر مدينتك" data-fr="Choisissez votre ville">اختر مدينتك</option>
+                <option value="الدار البيضاء (Casablanca)">الدار البيضاء (Casablanca)</option>
+                <option value="الرباط (Rabat)">الرباط (Rabat)</option>
+                <option value="مراكش (Marrakech)">مراكش (Marrakech)</option>
+                <option value="طنجة (Tanger)">طنجة (Tanger)</option>
+                <option value="فاس (Fès)">فاس (Fès)</option>
+                <option value="أكادير (Agadir)">أكادير (Agadir)</option>
+                <option value="سلا (Salé)">سلا (Salé)</option>
+                <option value="مكناس (Meknès)">مكناس (Meknès)</option>
+                <option value="القنيطرة (Kénitra)">القنيطرة (Kénitra)</option>
+                <option value="تطوان (Tétouan)">تطوان (Tétouan)</option>
+                <option value="وجدة (Oujda)">وجدة (Oujda)</option>
+                <option value="مدينة أخرى (Autre Ville)">مدينة أخرى (Autre Ville)</option>
+              </select>
+            </div>
+
+            <!-- Detailed Address -->
+            <div>
+              <label class="block text-xs font-bold text-zinc-700 mb-1" data-ar="العنوان بالتفصيل (الحي، رقم المنزل) *" data-fr="Adresse exacte (Quartier, Numéro) *">العنوان بالتفصيل (الحي، رقم المنزل) *</label>
+              <input 
+                type="text" 
+                id="customerAddress" 
+                required 
+                placeholder="مثال: حي المعاريف، زنقة 14، رقم 22" 
+                data-placeholder-ar="مثال: حي المعاريف، زنقة 14، رقم 22"
+                data-placeholder-fr="Ex: Bd Zerktouni, Apt 4, Casablanca"
+                class="w-full px-4 py-3 rounded-xl bg-brand-cream border border-brand-sand text-sm focus:border-brand-dark focus:outline-none transition"
+              />
+            </div>
+
+            <!-- Order Summary Banner inside Form -->
+            <div class="bg-brand-sand/60 rounded-2xl p-3.5 border border-brand-sand flex justify-between items-center text-sm">
+              <div>
+                <span class="text-xs text-brand-taupe block" data-ar="المجموع النهائي:" data-fr="Total à payer:">المجموع النهائي:</span>
+                <span class="font-black text-brand-dark text-lg" id="finalPriceText">220 DH</span>
+              </div>
+              <div class="text-end">
+                <span class="inline-block text-[11px] font-bold text-brand-dark bg-white px-2.5 py-1 rounded-full border border-brand-sand" id="orderSummaryPill">
+                  جملي / 38 (1)
+                </span>
+              </div>
+            </div>
+
+            <!-- Submit to WhatsApp Button -->
+            <button 
+              type="submit" 
+              class="w-full py-4 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-700 active:scale-[0.99] text-white font-black text-base shadow-lg shadow-emerald-600/30 transition flex items-center justify-center gap-2.5"
+            >
+              <!-- WhatsApp Icon SVG -->
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.97.55 2.01.848 3.082.849h.005c3.18 0 5.767-2.587 5.768-5.766.001-3.181-2.586-5.768-5.768-5.768zm9.969 5.766c0 5.514-4.486 10-10 10-1.745 0-3.385-.45-4.819-1.242l-5.181 1.358 1.382-5.05c-.878-1.488-1.382-3.224-1.382-5.066 0-5.514 4.486-10 10-10s10 4.486 10 10z"/>
+              </svg>
+              <span data-ar="تأكيد الطلب عبر الواتساب" data-fr="Confirmer la commande sur WhatsApp">تأكيد الطلب عبر الواتساب</span>
+            </button>
+
+            <p class="text-[11px] text-center text-zinc-500 pt-1" data-ar="سيتم فتح تطبيق الواتساب مباشرة مع تفاصيل طلبك" data-fr="L'application WhatsApp s'ouvrira directement avec votre commande">
+              سيتم فتح تطبيق الواتساب مباشرة مع تفاصيل طلبك
+            </p>
+
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Sticky Bottom Quick Checkout Bar (Mobile Users) -->
+  <aside class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-brand-sand px-4 py-3 sticky-bar-shadow">
+    <div class="max-w-md mx-auto flex items-center justify-between gap-3">
+      <div>
+        <span class="text-[10px] text-brand-taupe block font-bold uppercase tracking-wider" data-ar="المجموع" data-fr="Total">المجموع</span>
+        <div class="flex items-baseline gap-1.5">
+          <span class="font-black text-xl text-brand-dark" id="stickyPriceText">220 DH</span>
+          <span class="text-[10px] text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded" data-ar="شحن مجاني" data-fr="Gratuit">شحن مجاني</span>
+        </div>
+      </div>
+
+      <button 
+        onclick="scrollToOrderForm()" 
+        class="flex-1 py-3 px-4 rounded-xl bg-brand-dark hover:bg-black text-white font-bold text-sm flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition"
+      >
+        <span data-ar="اطلب الآن (الدفع عند الاستلام)" data-fr="Commander (Payer à la livraison)">اطلب الآن (الدفع عند الاستلام)</span>
+        <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Application Logic: Variants, Sizing, Pricing & WhatsApp Generator -->
+  <script>
+    // Exact Product Variants representing the user's photos
+    const VARIANTS = {
+      camel: {
+        id: 'camel',
+        nameAr: 'بني جملي (Camel)',
+        nameFr: 'Marron Camel (Cuir Suède)',
+        colorCode: '#964724',
+        img: 'IMG_7612.JPG_2.jpeg'
+      },
+      sable: {
+        id: 'sable',
+        nameAr: 'بيج رملي (Sable / Beige)',
+        nameFr: 'Beige Sable (Cuir Suède)',
+        colorCode: '#D4C3A3',
+        img: 'IMG_7613.JPG_2.jpeg'
+      },
+      taupe: {
+        id: 'taupe',
+        nameAr: 'رمادي طوب (Taupe / Kaki)',
+        nameFr: 'Taupe Kaki (Cuir Suède)',
+        colorCode: '#827D70',
+        img: 'IMG_7611.JPG_2.jpeg'
+      },
+      noir: {
+        id: 'noir',
+        nameAr: 'أسود ملكي (Noir)',
+        nameFr: 'Noir Profond (Cuir Suède)',
+        colorCode: '#202022',
+        img: 'IMG_7614.JPG_2.jpeg'
+      }
+    };
+
+    // State Variables
+    let selectedColor = 'camel';
+    let selectedSize = '38';
+    let quantity = 1;
+    const UNIT_PRICE = 220; // Moroccan Dirhams (DH)
+    const WHATSAPP_PHONE = '212637679048'; // 0637679048 formatted for WhatsApp API
+    let currentLang = 'ar';
+
+    // Initialize UI on Load
+    window.addEventListener('DOMContentLoaded', () => {
+      selectVariant('camel');
+      selectSize('38');
+      updatePriceAndSummary();
+    });
+
+    // Color Swatch Selection Handler
+    function selectVariant(colorKey) {
+      if (!VARIANTS[colorKey]) return;
+      selectedColor = colorKey;
+      const variant = VARIANTS[colorKey];
+
+      // Fade out image slightly, update src, fade in
+      const mainImg = document.getElementById('mainProductImg');
+      mainImg.style.opacity = '0.3';
+      mainImg.style.transform = 'scale(0.98)';
+      
+      setTimeout(() => {
+        mainImg.src = variant.img;
+        mainImg.style.opacity = '1';
+        mainImg.style.transform = 'scale(1)';
+      }, 150);
+
+      // Update swatch active rings
+      document.querySelectorAll('.color-swatch-btn').forEach(btn => {
+        btn.classList.remove('bg-brand-sand', 'border-brand-dark');
+        const circle = btn.querySelector('span:first-child');
+        if (circle) circle.classList.remove('swatch-ring');
+      });
+
+      const activeBtn = document.getElementById(`swatch-${colorKey}`);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-brand-sand', 'border-brand-dark');
+        const activeCircle = activeBtn.querySelector('span:first-child');
+        if (activeCircle) activeCircle.classList.add('swatch-ring');
+      }
+
+      // Update color title
+      document.getElementById('activeColorName').textContent = currentLang === 'ar' ? variant.nameAr : variant.nameFr;
+      updatePriceAndSummary();
+    }
+
+    // Size Picker Handler
+    function selectSize(size) {
+      selectedSize = size;
+      document.querySelectorAll('.size-btn').forEach(btn => {
+        btn.classList.remove('bg-brand-dark', 'text-white', 'border-brand-dark', 'shadow-md');
+        btn.classList.add('bg-white', 'text-brand-dark', 'border-brand-sand');
+      });
+
+      const activeBtn = document.getElementById(`size-btn-${size}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-white', 'text-brand-dark', 'border-brand-sand');
+        activeBtn.classList.add('bg-brand-dark', 'text-white', 'border-brand-dark', 'shadow-md');
+      }
+      updatePriceAndSummary();
+    }
+
+    // Quantity Increment / Decrement
+    function updateQty(change) {
+      quantity = Math.max(1, Math.min(10, quantity + change));
+      document.getElementById('qtyCounter').textContent = quantity;
+      updatePriceAndSummary();
+    }
+
+    // Update Totals and Live Order Pill
+    function updatePriceAndSummary() {
+      const total = quantity * UNIT_PRICE;
+      const totalStr = `${total} DH`;
+
+      document.getElementById('finalPriceText').textContent = totalStr;
+      document.getElementById('stickyPriceText').textContent = totalStr;
+
+      const variantName = currentLang === 'ar' ? VARIANTS[selectedColor].nameAr : VARIANTS[selectedColor].nameFr;
+      const summaryText = `${variantName.split(' ')[0]} / ${selectedSize} (${quantity})`;
+      document.getElementById('orderSummaryPill').textContent = summaryText;
+    }
+
+    // Smooth Scroll To Form on Mobile
+    function scrollToOrderForm() {
+      const orderEl = document.getElementById('orderSection');
+      if (orderEl) {
+        orderEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // focus the first empty input
+        setTimeout(() => {
+          document.getElementById('customerName').focus();
+        }, 400);
+      }
+    }
+
+    // Handle Order Submission & WhatsApp API Link Generator
+    function handleOrderSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('customerName').value.trim();
+      const phone = document.getElementById('customerPhone').value.trim();
+      const city = document.getElementById('customerCity').value;
+      const address = document.getElementById('customerAddress').value.trim();
+
+      if (!name || !phone || !city || !address) {
+        alert(currentLang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة' : 'Veuillez remplir tous les champs obligatoires.');
+        return;
+      }
+
+      const variant = VARIANTS[selectedColor];
+      const colorLabel = currentLang === 'ar' ? variant.nameAr : variant.nameFr;
+      const totalAmount = quantity * UNIT_PRICE;
+
+      // Construct WhatsApp message template
+      let message = '';
+      if (currentLang === 'ar') {
+        message = 
+`*🛍️ طلب جديد من متجر maisonsabot*
+--------------------------------
+*المنتج:* سابو بوسطن جلد سويدي
+*اللون:* ${colorLabel}
+*المقاس:* ${selectedSize}
+*الكمية:* ${quantity}
+*المجموع:* ${totalAmount} درهم (توصيل مجاني)
+--------------------------------
+*معلومات الزبون:*
+👤 *الاسم:* ${name}
+📞 *الهاتف:* ${phone}
+📍 *المدينة:* ${city}
+🏠 *العنوان:* ${address}
+--------------------------------
+الدفع عند الاستلام. في انتظار التأكيد وشكراً!`;
+      } else {
+        message = 
+`*🛍️ Nouvelle Commande — maisonsabot*
+--------------------------------
+*Produit:* Sabot Boston en Cuir Suède
+*Couleur:* ${colorLabel}
+*Pointure:* ${selectedSize}
+*Quantité:* ${quantity}
+*Total:* ${totalAmount} DH (Livraison Gratuite)
+--------------------------------
+*Informations Client:*
+👤 *Nom:* ${name}
+📞 *Téléphone:* ${phone}
+📍 *Ville:* ${city}
+🏠 *Adresse:* ${address}
+--------------------------------
+Paiement à la livraison. Merci de confirmer ma commande!`;
+      }
+
+      // Encode for URL safely
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodedMessage}`;
+
+      // Open WhatsApp directly
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // Bilingual Toggle Switcher (Arabic <-> French)
+    function toggleLang() {
+      currentLang = currentLang === 'ar' ? 'fr' : 'ar';
+      const html = document.documentElement;
+      
+      html.setAttribute('lang', currentLang);
+      html.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+      document.getElementById('langText').textContent = currentLang === 'ar' ? 'Français' : 'العربية';
+
+      // Update all data-ar and data-fr elements
+      document.querySelectorAll('[data-ar][data-fr]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+
+      // Update placeholders
+      document.querySelectorAll('[data-placeholder-ar][data-placeholder-fr]').forEach(el => {
+        el.placeholder = el.getAttribute(`data-placeholder-${currentLang}`);
+      });
+
+      // Refresh color and summary labels in the new language
+      selectVariant(selectedColor);
+    }
+  </script>
+</body>
+</html>
